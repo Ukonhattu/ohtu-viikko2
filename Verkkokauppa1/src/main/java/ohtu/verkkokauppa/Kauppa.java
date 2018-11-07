@@ -19,6 +19,7 @@ public class Kauppa {
         this.varasto = varasto;
         this.pankki = pankki;
         this.viitegeneraattori = vg;
+        kaupanTili = "33333-44455";
     }
 
     public void aloitaAsiointi() {
