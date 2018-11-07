@@ -16,6 +16,8 @@ public class Varasto implements Sailytys {
     }
     public Varasto(Kirjanpitaja k) {
         kirjanpito = k;
+        saldot = new HashMap<Tuote, Integer>();
+        alustaTuotteet();
     }
             
     @Override
