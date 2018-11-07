@@ -2,11 +2,18 @@ package ohtu;
 
 import ohtu.verkkokauppa.Kauppa;
 import ohtu.verkkokauppa.Kirjanpito;
+import ohtu.verkkokauppa.Pankki;
+import ohtu.verkkokauppa.Varasto;
+import ohtu.verkkokauppa.Viitegeneraattori;
 
 public class Main {
 
     public static void main(String[] args) {
-        Kauppa kauppa = new Kauppa();
+        Kirjanpito kirjanpito = new Kirjanpito();
+        Varasto varasto = new Varasto(kirjanpito);
+        Pankki pankki = new Pankki(kirjanpito);
+        Viitegeneraattori vg = new Viitegeneraattori();
+        Kauppa kauppa = new Kauppa(varasto, pankki, vg);
 
         // kauppa hoitaa yhden asiakkaan kerrallaan seuraavaan tapaan:
         kauppa.aloitaAsiointi();
