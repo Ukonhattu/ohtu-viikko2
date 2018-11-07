@@ -1,0 +1,7 @@
+[Kauppa]
+[Kirjanpito]->[Pankki]
+[Ostoskori]->[kauppa]
+[Pankki]->[Kauppa]
+[Tuote]*-[Ostoskori]
+[Varasto]->[Kauppa]
+[Viitegeneraattori]->[Kauppa]
